@@ -1,0 +1,858 @@
+.container::-webkit-scrollbar {
+    width: 7px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.container::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: #888;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    margin: 0;
+}
+
+
+#page-content
+{
+    background-color: transparent;
+}
+.sidebar {
+    background-color: #303030;
+    color: white;
+    width: 250px;
+    min-width: 250px;
+    transition: all 0.2s ease-in-out; /* Speed up the transition */
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+    min-width: 80px;
+}
+
+.sidebar .nav-link {
+    margin-top: 5%;
+    font-family: "Poppins";
+    font-weight: 600;
+    white-space: nowrap;
+    color: white;
+    padding: 15px 22px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: left;
+    transition: padding 0.2s ease-in-out; /* Speed up the transition */
+}
+
+.sidebar .nav-link i {
+    justify-content: left;
+    align-items: left;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.sidebar .nav-link span {
+    padding-left: 3px;
+    font-size: 1.1rem;
+}
+
+.sidebar.collapsed .nav-link {
+    padding: 15px;
+    justify-content: center;
+}
+
+.sidebar.collapsed .nav-link span {
+    display: none; /* Hide text immediately */
+}
+
+.sidebar .nav-link:hover {
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    transition: margin-left 0.2s ease-in-out; /* Speed up the transition */
+}
+
+.content.collapsed {
+    margin-left: 80px;
+}
+
+/* Sidebar Heading */
+.sidebar-heading {
+    height: 80px;
+    font-size: 20pt;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #241E20;
+    padding: 10px 30px;
+    background: linear-gradient(90deg, #157E4A 22%, #137444 100%);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-heading img {
+    margin-right: 7px;
+}
+
+.sidebar.collapsed .sidebar-heading {
+    padding: 10px;
+}
+
+.sidebar.collapsed .sidebar-heading img {
+    margin-left: 5px;
+}
+
+.sidebar.collapsed .sidebar-heading span {
+    display: none;
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #157E4A 22%, #137444 100%);
+    height: 80px;
+    padding-left: 1%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+#sidebarToggle
+{
+    cursor: pointer;
+}
+
+
+/* Logout Button Styles */
+.logout {
+    padding: 15px 65px;
+    background-color: #383838;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    font-family: "Poppins";
+    font-weight: 600;
+    transition: all 0.2s ease-in-out; /* Speed up the transition */
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+#logout-btn {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+
+.logout i {
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    font-size: 1.35rem;
+}
+
+.sidebar.collapsed .logout {
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: padding 0.2s ease-in-out; /* Speed up the transition */
+}
+
+.sidebar.collapsed .logout span {
+    display: none; /* Hide text immediately */
+}
+
+.sidebar.collapsed .logout i {
+    margin-right: 0;
+    font-size: 1.2rem;
+}
+
+.logout:hover {
+    background-color: #4a4a4a;
+}
+
+/* Navbar for Dashboard and Hamburger Icon */
+.navbar-toggler {
+    border: none; /* Remove border */
+    background: transparent;
+    color: white;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar-toggler-icon {
+    content: '\2630';
+    font-size: 24px;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-toggler, select {
+    border: none !important;
+    outline: none !important;
+}
+
+.sidebarToggle2 {
+    border: none; /* Remove border */
+    background: transparent;
+    color: white;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar-light .sidebarToggle2 {
+    border-color: transparent;
+}
+
+.sidebarToggle2, select {
+    border: none !important;
+    outline: none !important;
+}
+
+#sidenav-heading-text, .navbar-brand
+{
+    cursor: default;
+}
+.navbar-brand
+{
+    font-family: 'Poppins';
+}
+
+#offcanvasExample
+{
+    width: 300px;
+    max-width: 100%;
+}
+#offcanvasExample .offcanvas-header
+{
+    border-bottom: 1px solid rgba(59, 59, 59, 0.7);
+}
+#offcanvasExample .offcanvas-title
+{
+    margin-left: 20px;
+    font-size: 20pt;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #241E20;
+}
+
+
+#offcanvas-nav .nav-link i
+{
+    color: #424242;
+    font-size: 14pt;
+}
+#offcanvas-nav #nav-text
+{
+    color: #424242;
+}
+
+#offcanvas-nav .nav-item .nav-link {
+    font-size: 17px !important;
+    padding: 17px 20px !important;
+}
+
+
+
+.container
+{
+    padding-top: 100px;
+}
+#loan-calcu
+{
+    padding-top: 80px;
+}
+
+#page-content
+{
+    padding: 0;
+}
+#opacity-changed
+{
+    color: #808080;
+}
+
+#td-loan-status
+{
+    border-top: 3px solid #368965;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+#scheduled_payment_table 
+{
+    background-color: #C7E0CD;
+    border-radius: 6px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+table 
+{
+    overflow-x: auto;
+    /* border-collapse: collapse; */
+    margin-top: 0%;
+    width: 100%;
+}
+.table-responsive
+{
+    width: 100%;
+}
+
+
+
+.bi
+{
+    font-size: 22pt;
+}
+
+.nav-item:hover{
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-item:hover .nav-link i, 
+.nav-item:hover .nav-link span {
+    color: black;
+}
+
+.nav-item:hover .nav-link
+{
+    padding-left: 25px;
+}
+.navbar-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#profile-header
+{
+    margin-left: -15px;
+    width: 80vh;
+}
+
+
+
+#wallet
+{
+    background-color: #085A3E; 
+    color: white; 
+    font-size: 27px; 
+    padding: 14px; 
+    border-radius: 55%;
+    margin-top: -10%;
+}
+
+#loan-due-payment 
+{
+    border-radius: 25px;
+    background-image: url("card-design34.png");
+    background-size: cover;
+    background-position: top left;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#data-as-of
+{
+    font-size: 0.873rem;
+    margin-right: 10px;
+}
+
+#due-amount
+{
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+#remaining-balance-data
+{
+    font-size: 2.85rem;
+}
+
+#loan-type
+{
+    font-family: 'Poppins';
+    text-align: left;
+    font-weight: 500!important;
+    font-size: 0.89rem!important;
+}
+#loan-details
+{
+    font-family: 'Poppins';
+}
+
+
+#due-date
+{
+    font-family: Arial;
+    text-align: right;
+    font-size: 0.88rem!important;
+    font-weight: 400!important;
+}
+#lighter
+{
+    font-size: 0.88rem!important;
+    font-weight: 700!important;
+}
+
+#td-loan-name
+{
+    text-align: left;
+    width: 20%;
+}
+#td-loan-type
+{
+    padding-top: 6px;
+}
+#loan-name
+{
+    display: inline;
+}
+#p-loan-amount
+{
+    padding-top: 6px;
+}
+#p-loan-status
+{
+    padding-top: 5px;
+}
+#td-icon
+{
+    width: 10%;
+    text-align: center;
+}
+
+
+
+#loan-history-table
+{
+    overflow-x: hidden;
+    font-family: sans-serif;
+    font-size: 13px; 
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    white-space: nowrap;
+
+    margin-top: 1%;
+    
+}
+
+#history-header td
+{
+    font-weight: bold;
+}
+#loan-history-table tbody td {
+    padding: 10px 10px;
+    margin-bottom: 1%;
+}
+
+#loan-history-table tr
+{
+    height: 15px;
+}
+
+#loan-history-table thead, #loan-history-table tr, #loan-history-table td
+{
+    border: none;
+}
+#loan-requests-div, #recent-transac-div
+{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#transaction-tr td
+{
+    margin-top: 20px;
+}
+#hfscco-logo
+{
+    height: 60px; 
+    width: 60px;
+}
+.bx
+{
+    font-size: 1.672rem!important;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        height: auto !important;
+        overflow: auto;
+    }
+    .container
+    {
+        padding-top: 25px!important;
+    }
+    .content {
+        overflow: auto !important;
+    }
+    #side-navbar {
+        background: linear-gradient(90deg, #157E4A 22%, #137444 100%);
+        height: 80px;
+        padding-left: 1%;
+        position: sticky; 
+        top: 0;
+        z-index: 999;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .sidebar {
+        width: 80px;
+        min-width: 80px;
+    }
+    .sidebar.collapsed {
+        height: 100vh;
+        overflow: hidden!important;
+    }
+
+    .sidebar ul li {
+        margin-left: 5px;
+    }
+
+    .content {
+        margin-left: 80px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .logout span {
+        display: none;
+    }
+
+    #sidebarToggle {
+        display: none !important;
+    }
+
+    .navbar-brand {
+        text-align: left;
+        margin-left: 5%;
+    }
+
+    #loan-due-payment #card-header h3
+    {
+        font-size: 1.15rem!important;
+    }
+
+    #remaining-balance-data
+    {
+        font-size: 1.75rem!important;
+    }
+    #remaining-balance-data span
+    {
+        margin-left: 3px!important;
+        font-size: 12pt!important;
+    }
+    #card-logo
+    {
+        width: 6vh!important;
+    }
+    #loan-details, #due-amount
+    {
+        font-size: 0.85rem!important;
+        margin-top: 8px;
+    }
+    #due-date
+    {
+        font-size: 0.68rem!important;
+        text-align: right;
+    }
+    #due-date p
+    {
+        width: 100%;
+        padding: 1px;
+    }
+    #lighter
+    {
+        display: block;
+        font-size: 0.68rem!important;
+    }
+    #td-icon
+    {
+        width: 5%;
+        text-align: center;
+    }
+    #wallet
+    {
+        font-size: 23px; 
+        padding: 9px; 
+    }
+    #wallet-due-date
+    {
+        font-size: 7.3pt!important;
+    }
+
+    #scheduled_payment_table {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    table th, table td {
+        padding: 8px;
+    }
+
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on mobile devices */
+    }
+}
+
+
+@media (max-width: 576px) {
+    #scheduled_payment_table {
+        padding: 10px;
+        font-size: 12px;
+    }
+    #card-header
+    {
+
+    }
+    #card-logo
+    {
+        width: 4vh!important;
+    }
+    table th, table td {
+        padding: 6px;
+    }
+    .navbar-brand
+    {
+        font-size: 18px;
+    }
+    #loan-history-table
+    {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 425px) 
+{
+    .navbar
+    {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+    #navbar-logo
+    {
+        display: block!important;
+        margin-left: 5%;
+        margin-right: -6px!important;
+    }
+        
+    #card-header h3
+    {
+        font-size: 1.20rem!important;
+    }
+    
+    #loan-due-payment
+    {
+        margin-top: 1%!important;
+    }
+    #remaining-balance-data
+    {
+        font-size: 2rem!important;
+    }
+    #remaining-balance-data span
+    {
+        margin-left: 3px!important;
+        font-size: 12pt!important;
+    }
+    
+    #loan-type
+    {
+        font-size: 0.78rem!important;
+        margin-top: 5%!important;
+    }
+    #due-date
+    {
+        font-size: 0.78rem!important;
+        text-align: right;
+    }
+    #due-date p
+    {
+        width: 100%;
+        padding: 1px;
+    }
+    #lighter
+    {
+        display: block;
+        font-size: 0.78rem!important;
+    }
+    #td-icon
+    {
+        width: 2%!important;
+        text-align: center;
+    }
+    #wallet
+    {
+        font-size: 23px; 
+        padding: 9px; 
+    }
+    #wallet-due-date
+    {
+        font-size: 7.3pt!important;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .container
+    {
+        padding-top: 10px!important;
+    }
+    #sidebar {
+        display: none;
+    }
+
+    #page-content 
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+    #loan-type
+    {
+        margin-top: 2%!important;
+    }
+
+    #side-navbar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+    .navbar-toggler {
+        order: 1;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        order: 1;
+    }
+    #td-icon
+    {
+        width: 2%!important;
+        text-align: center;
+    }
+    #loan-history-table-body
+    {
+        padding-bottom: 0%;
+    }
+    #loan-history-table
+    {
+        margin-left: -1%;
+        width: 90%!important;
+    }
+    #loan-history-table tbody td {
+        padding: 10px 7.1px;
+    }
+    #wallet-due-date
+    {
+        font-size: 6.5pt!important;
+    }
+    #loan-history-table-body
+    {
+        height: 200px;
+    }
+    #recent-transac-dashb
+    {
+        height: 200px!important;
+    }
+
+}
+@media (max-width: 350px)
+{
+    #card-logo
+    {
+        display: none;
+    }
+    #remaining-balance-data
+    {
+        font-size: 1.52rem!important;
+        margin-top: -5%!important;
+    }
+    #data-as-of
+    {
+        font-size: 0.563rem;
+        margin-left: 3px;
+    }
+    #data-as-of span::before {
+        content: "";
+        display: block;
+    }
+    #balance-interest
+    {
+        margin-right: 50px;
+    }
+    #balance-text, #interest-text
+    {
+        text-align: center;
+        font-size: 0.68rem;
+    }
+    #loan-type
+    {
+        font-size: 0.750rem!important;
+        white-space: normal;
+    }
+    #loan-details
+    {
+        margin-top: -3%!important;
+    }
+    #due-date p
+    {
+        font-size: 0.68rem!important;
+    }
+    #due-date span
+    {
+        font-size: 0.70rem!important;
+    }
+    #loan-due-payment
+    {
+        background-image: url("card-design35.png");
+    }
+    
+}
