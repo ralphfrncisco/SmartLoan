@@ -308,7 +308,7 @@ INSERT INTO `members_acc` (`account_id`, `application_num`, `Email`, `password`,
 ('9995', NULL, 'board5@gmail.com', '0a21970151743798d334c659c7e5727c', 'board_of_director', 'Active'),
 ('9996', NULL, 'board6@gmail.com', '59a0c65521f41ab7322d7d3bcd5ef555', 'board_of_director', 'Active'),
 ('9997', NULL, 'board7@gmail.com', '64b0edb6db862d659290ee6bbbe3d0b4', 'board_of_director', 'Active'),
-('KR2078', NULL, 'ralphfrancisco1623@gmail.com', '17ac1e525f8a398ef3431566b1bd1a19', 'member', 'Active'),
+('KR2078', NULL, 'member1@gmail.com', '17ac1e525f8a398ef3431566b1bd1a19', 'member', 'Active'),
 ('KR9071', 202449022064, 'manuel.carlito@gmail.com', 'c28bbe0ef3adb7134a3ce058cc01ddda', 'member', 'Active');
 
 -- --------------------------------------------------------
