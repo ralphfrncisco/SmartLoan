@@ -1,0 +1,319 @@
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    max-width: 850px;
+    border-top: 7px solid #368965;
+    border-left: 1px solid #B6BCC8;
+    border-right: 1px solid #B6BCC8;
+    border-bottom: 1px solid #B6BCC8;
+    border-radius: 4px;
+    width: 100%;
+    padding: 35px;
+    margin-top: 0.47%;
+    margin-bottom: 1%;
+}
+
+#required
+{
+    color: red;
+}
+
+#registration-header
+{
+    margin-left: -20px;
+    padding-top: 0px;
+    /* border-bottom: 1px solid #B6BCC8; */
+}
+#registration-input-header
+{
+    padding-top: 5.7%;
+    border-top: 1px solid #B6BCC8;
+}
+
+#hfscco-logo
+{
+    height: 90px; 
+    width: 90px;
+}
+
+
+
+input[type = "date"]
+{
+    width: 180px;
+    padding: 7px;
+}
+#place-of-birth
+{
+    padding: 7px;
+}
+.form-select
+{
+    width: 180px;
+    border-color: #B6BCC8;
+    padding: 6px;
+}
+#educ-attainment
+{
+    width: 250px;
+}
+
+#form-control-buttons
+{
+    border-top: 1px solid #B6BCC8;
+}
+.btn
+{
+    padding: 10px 30px;
+}
+#cancel-btn
+{
+    border: 1px solid rgb(182, 188, 200);
+    color:rgba(0, 0, 0, 0.8);
+}
+#cancel-btn i
+{
+    margin-left: -20px;
+    margin-right: 10px;
+}
+.custom-width {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    #educ-attainment
+    {
+        width: 215px!important;
+    }
+    #birthdate, #civil-status
+    {
+        width: 160px!important;
+    }
+}
+
+@media screen and (max-width: 450px)  
+{
+    .container
+    {
+        border: none!important;
+    }
+    #sub-text
+    {
+        font-size: 0.678rem;
+    }
+
+    #registration-input-header h5, #account-information-header h5
+    {
+        font-size: 1.200rem;
+    }
+    #registration-header img
+    {
+        margin-left: 15px;
+    }
+    label, p
+    {
+        font-size: 0.878rem;
+    }
+    .modal-dialog
+    {
+        max-width: 100%;
+    }
+    .modal-header img
+    {
+        width: 70px!important;
+        height: 70px!important;
+    }
+    .modal-body
+    {
+        padding: 28px;
+        font-size: 0.922rem!important;
+    }
+}
+@media screen and (max-width: 390px)  
+{
+    #header-text
+    {
+        margin-left: -9px;
+    }
+
+    #cancel-btn, #Register
+    {
+        padding: 8px 25px!important;
+    }
+    #cancel-btn i
+    {
+        margin-left: -15px;
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width: 375px)
+{
+    #registration-header img
+    {
+        margin-left: 20px;
+    }
+    .modal-header
+    {
+        padding-top: 7%;
+    }
+    .modal-body
+    {
+        font-size: 0.722rem!important;
+    }
+
+    #hfscco-logo
+    {
+        height: 65px!important;
+        width: 65px!important;
+    }
+    #header-text
+    {
+        margin-left: -5px;
+        margin-top: 9px;
+    }
+    #header-text h2
+    {
+        font-size: 1.267rem!important;
+    }
+    #sub-text
+    {
+        font-size: 0.568rem;
+    }
+    #next-button
+    {
+        padding: 8px 25px;
+        font-size: 0.820rem!important;
+    }
+}
+
+
+@media screen and (max-width: 350px)  
+{
+    #registration-header img
+    {
+        margin-left: 15px;
+    }
+    #header-text
+    {
+        margin-left: -5px;
+    }
+    #header-text h2
+    {
+        font-size: 1.18rem!important;
+    }
+    #sub-text
+    {
+        font-size: 0.628rem;
+    }
+}
+
+@media screen and (max-width: 330px)  
+{
+    #header-text h2
+    {
+        font-size: 1.16rem;
+    }
+    #sub-text
+    {
+        font-size: 0.578rem;
+    }
+    #cancel-btn, #Register
+    {
+        padding: 8px 17px!important;
+        font-size: 0.818rem;
+    }
+    #cancel-btn i
+    {
+        margin-left: -8px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 320px)  
+{
+    #registration-header img
+    {
+        margin-left: 10px;
+    }
+    #header-text
+    {
+        margin-left: 1px;
+        margin-top: 9px;
+    }
+    #header-text h2
+    {
+        font-size: 1.038rem!important;
+    }
+    #sub-text
+    {
+        font-size: 0.506rem;
+    }
+    .modal-header
+    {
+        padding-top: 7%;
+    }
+    .modal-header img
+    {
+        width: 50px!important;
+        height: 50px!important;
+    }
+    .modal-header h1
+    {
+        font-size: 1.142rem!important;
+
+    }
+    .modal-header small
+    {
+        font-size: 0.662rem!important;
+    }
+}
+@media screen and (max-width: 310px)  
+{
+    #header-text h2
+    {
+        font-size: 1.108rem;
+    }
+    #sub-text
+    {
+        font-size: 0.478rem;
+    }
+}
+
+@media screen and (max-width: 290px)  
+{
+
+    #header-text h2
+    {
+        font-size: 1.008rem;
+    }
+    #sub-text
+    {
+        font-size: 0.478rem;
+    }
+    #occupation
+    {
+        width: 220px;
+    }
+}
