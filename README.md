@@ -91,7 +91,7 @@ This system demonstrates practical application of full-stack web development, da
 - use the credentials below to access the members dashboard
 
 email address:
-ralphfrancisco1623@gmail.com
+member1@gmail.com
 password:
 030803
 
