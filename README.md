@@ -90,14 +90,14 @@ This system demonstrates practical application of full-stack web development, da
 
 - use the credentials below to access the members dashboard
 
-email address:
+  - email address:
 member1@gmail.com
 password:
 030803
 
 - to access the admin module for loan administrator
 
-email address:
+  - email address:
 loanPersonnel@gmail.com
 password:
 loanAdmin123
