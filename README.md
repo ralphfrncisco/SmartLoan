@@ -71,3 +71,33 @@ Backend:
 The goal of this project is to reduce processing time, eliminate redundant office visits, and improve accessibility by allowing members to manage loans online while providing administrators with an efficient management dashboard.
 
 This system demonstrates practical application of full-stack web development, database design, and real-world business logic for financial systems.
+
+
+### How to run the project?
+
+- Install XAMPP Control Panel using the link below
+ - https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.25/xampp-windows-x64-8.1.25-0-VS16-installer.exe
+
+- Download the files from the CAPSTONE folder and move it inside the "htdocs" folder located inside the directory of xampp
+
+- Start both the Apache and MySQL module from the XAMPP control panel
+
+- Go to phpmyadmin by pressing the "Admin" button of the MySQL module on the control panel
+
+- Create a database inside of myphpadmin and name it as "hfscco" then import the SQL file provided from the "sql database" 
+
+- go to your browser and type "localhost/CAPSTONE/login-page.php"
+
+- use the credentials below to access the members dashboard
+
+email address:
+ralphfrancisco1623@gmail.com
+password:
+030803
+
+- to access the admin module for loan administrator
+
+email address:
+loanPersonnel@gmail.com
+password:
+loanAdmin123
